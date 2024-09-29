@@ -135,7 +135,7 @@ For more details, check out the full documentation [here](https://github.com/Itz
 
 ## One-Click Deployment
 
-[![Deploy to RepoCloud](https://d16t0pc4846x52.cloudfront.net/deploylobe.svg)](https://repocloud.io/details/?repo=https://github.com/arnabing/dontbedumb)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/arnabing/dontbedumb)
 
 ## Upcoming Features
 
