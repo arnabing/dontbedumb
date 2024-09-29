@@ -1,0 +1,17 @@
+{
+    "name": "DontBeDumb",
+    "description": "Fact checker - AI powered.",
+    "repository": "https://github.com/arnabing/dontbedumb",
+    "keywords": ["node", "express", "next"],
+    "env": {
+      "OPENAI_API_KEY": {
+        "description": "Your OpenAI API key",
+        "required": true
+      }
+    },
+    "buildpacks": [
+      {
+        "url": "heroku/nodejs"
+      }
+    ]
+  }

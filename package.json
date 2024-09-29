@@ -2,14 +2,15 @@
   "name": "perplexica-backend",
   "version": "1.9.0-rc3",
   "license": "MIT",
-  "author": "ItzCrazyKns",
+  "author": "arnabing",
   "scripts": {
-    "start": "npm run db:push && node dist/app.js",
+    "start": "npm run db:push && node dist/app.js && cd ui && npm start",
     "build": "tsc",
     "dev": "nodemon src/app.ts",
     "db:push": "drizzle-kit push sqlite",
     "format": "prettier . --check",
-    "format:write": "prettier . --write"
+    "format:write": "prettier . --write",
+    "heroku-postbuild": "cd ui && npm install && npm run build"
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.10",
@@ -45,4 +46,4 @@
     "ws": "^8.17.1",
     "zod": "^3.22.4"
   }
-  }
+}
