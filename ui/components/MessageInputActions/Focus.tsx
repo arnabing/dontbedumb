@@ -84,7 +84,8 @@ const Focus = ({
             <ChevronDown size={20} />
           </div>
         ) : (
-          <ScanEye />
+          // <ScanEye />
+          null
         )}
       </Popover.Button>
       <Transition
