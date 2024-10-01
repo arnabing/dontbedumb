@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: perplexica-backend
+    name: dontbedumb-backend
     env: node
     buildCommand: yarn install && yarn build
     startCommand: yarn start
@@ -15,7 +15,7 @@ services:
         sync: false
 
   - type: web
-    name: perplexica-frontend
+    name: dontbedumb
     env: node
     buildCommand: cd ui && yarn install && yarn build
     startCommand: cd ui && yarn start
