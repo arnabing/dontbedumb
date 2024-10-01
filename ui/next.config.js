@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const path = require('path');
+
 const nextConfig = {
   images: {
     remotePatterns: [
@@ -19,7 +20,7 @@ const nextConfig = {
   webpack: (config) => {
     config.module.rules.push({
       test: /\.css$/,
-      use: ['postcss-loader'],
+      use: ['style-loader', 'css-loader', 'postcss-loader'],
     });
     return config;
   },
