@@ -4,8 +4,8 @@
   "license": "MIT",
   "author": "arnabing",
   "scripts": {
-    "start": "npm run db:push && node dist/app.js",
-    "build": "tsc",
+    "start": "node dist/app.js",
+    "build": "tsc && yarn db:push",
     "dev": "nodemon src/app.ts",
     "db:push": "drizzle-kit push sqlite",
     "format": "prettier . --check",
