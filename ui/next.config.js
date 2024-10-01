@@ -13,10 +13,9 @@ const nextConfig = {
     NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
     NEXT_PUBLIC_WS_URL: process.env.NEXT_PUBLIC_WS_URL,
   },
-  output: 'standalone',
+  output: 'export',
   experimental: {
     outputFileTracingRoot: path.join(__dirname, '../../'),
-    staticPageGenerationTimeout: 120000, // 2 minutes
   },
   webpack: (config) => {
     config.module.rules.push({
