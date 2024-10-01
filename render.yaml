@@ -17,7 +17,7 @@ services:
   - type: web
     name: dontbedumb
     env: node
-    buildCommand: cd ui && yarn install && yarn build
+    buildCommand: cd ui && yarn install && cp postcss.config.js ./standalone && yarn build
     startCommand: cd ui && yarn start
     envVars:
       - key: NODE_ENV
