@@ -24,6 +24,19 @@ app.get('/api', (_, res) => {
   res.status(200).json({ status: 'ok' });
 });
 
+app.get('/', (_, res) => {
+  res.status(200).json({ message: 'DontBeDumb backend is running' });
+});
+
+app.use('*', (req, res) => {
+  console.log(`Received request for ${req.originalUrl}`);
+  res.status(404).json({ message: 'Not Found' });
+});
+
+console.log('Starting server...');
+console.log(`Port: ${port}`);
+console.log(`Node environment: ${process.env.NODE_ENV}`);
+
 server.listen(port, () => {
   logger.info(`Server is running on port ${port}`);
 });
