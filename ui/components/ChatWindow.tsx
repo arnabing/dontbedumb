@@ -266,7 +266,7 @@ const ChatWindow = ({ id }: { id?: string }) => {
 
   const [isWSReady, setIsWSReady] = useState(false);
   const ws = useSocket(
-    process.env.NEXT_PUBLIC_WS_URL!,
+    process.env.NEXT_PUBLIC_WS_URL || 'wss://dontbedumb-backend.onrender.com',
     setIsWSReady,
     setHasError,
   );

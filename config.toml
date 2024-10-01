@@ -3,7 +3,7 @@ PORT = 3001 # Port to run the server on
 SIMILARITY_MEASURE = "cosine" # "cosine" or "dot"
 
 [API_KEYS]
-OPENAI = "" 
+OPENAI = "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" 
 GROQ = "" # Groq API key - gsk_1234567890abcdef1234567890abcdef
 ANTHROPIC = "" # Anthropic API key - sk-ant-1234567890abcdef1234567890abcdef
 

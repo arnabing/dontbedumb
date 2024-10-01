@@ -6,13 +6,14 @@ import routes from './routes';
 import { getPort } from './config';
 import logger from './utils/logger';
 
-const port = getPort();
+const port = process.env.PORT || getPort();
 
 const app = express();
 const server = http.createServer(app);
 
 const corsOptions = {
-  origin: '*',
+  origin: ['https://dontbedumb.onrender.com', 'http://localhost:3000'],
+  credentials: true,
 };
 
 app.use(cors(corsOptions));

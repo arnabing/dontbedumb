@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: perplexica-backend
+    env: node
+    buildCommand: yarn install && yarn build
+    startCommand: yarn start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+      - key: SEARXNG_API_URL
+        value: https://your-searxng-instance-url
+      - key: OPENAI_API_KEY
+        sync: false
+
+  - type: web
+    name: perplexica-frontend
+    env: node
+    buildCommand: cd ui && yarn install && yarn build
+    startCommand: cd ui && yarn start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_API_URL
+        value: https://dontbedumb-backend.onrender.com/api
+      - key: NEXT_PUBLIC_WS_URL
+        value: wss://dontbedumb-backend.onrender.com
+
+envVarGroups:
+  - name: perplexica-secrets
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
