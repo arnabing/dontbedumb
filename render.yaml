@@ -14,22 +14,6 @@ services:
       - key: OPENAI_API_KEY
         sync: false
 
-  - type: web
-    name: dontbedumb
-    env: node
-    nodeVersion: 18.x
-    buildCommand: cd ui && yarn install --production=false && yarn build && cp -r .next/standalone ./standalone && cp -r .next/static ./standalone/.next/static && cp next.config.js ./standalone && cp package.json ./standalone && cp postcss.config.js ./standalone
-    startCommand: cd ui && yarn start
-    envVars:
-      - key: NODE_ENV
-        value: production
-      - key: NEXT_PUBLIC_API_URL
-        value: https://dontbedumb-backend.onrender.com/api
-      - key: NEXT_PUBLIC_WS_URL
-        value: wss://dontbedumb-backend.onrender.com
-      - key: PORT
-        value: 3000
-
 envVarGroups:
   - name: perplexica-secrets
     envVars:
