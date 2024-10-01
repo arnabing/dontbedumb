@@ -17,8 +17,8 @@ services:
   - type: web
     name: dontbedumb
     env: node
-    buildCommand: cd ui && yarn install && yarn build
-    startCommand: cd ui && yarn start
+    buildCommand: cd ui && yarn install && yarn build && cp -r .next/standalone ./standalone && cp -r .next/static ./standalone/.next/static && cp next.config.js ./standalone && cp package.json ./standalone
+    startCommand: cd ui/standalone && node server.js
     envVars:
       - key: NODE_ENV
         value: production
